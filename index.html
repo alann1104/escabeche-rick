@@ -5,85 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitación a la venta de escabeche de pollo y berenjena</title>
   <style>
+    /* Estilos generales */
     body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: url("space-background.jpg") no-repeat fixed center;
-      background-size: cover;
+      background-color: #ffecd8;
+      color: #333;
     }
-    
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
+
+    /* Encabezado */
+    header {
+      background-color: #ff8533;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 5px;
+      text-align: center;
     }
-    
+
     h1 {
-      text-align: center;
-      color: #FFD700;
-      font-family: 'Arial Black', Arial, sans-serif;
-      font-size: 28px;
-      margin-top: 0;
+      font-size: 32px;
+      color: #fff;
+      margin: 0;
     }
-    
+
+    /* Contenido principal */
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ff8533;
+      margin: 0 0 20px;
+    }
+
     p {
-      color: #FFF;
-      font-family: 'Arial', sans-serif;
-      font-size: 16px;
+      margin: 0 0 10px;
     }
-    
-    .invitation-card {
+
+    /* Recetas */
+    .recetas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .receta {
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    /* Introducción */
+    .introduccion {
+      margin-bottom: 20px;
+      background-color: #ffd8b5;
       padding: 20px;
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      background-color: rgba(0, 0, 0, 0.6);
     }
-    
-    .invitation-card img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-    }
-    
-    .invitation-card .details {
+
+    /* Imágenes */
+    .imagenes {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-top: 20px;
+    }
+
+    .imagenes img {
+      max-width: 200px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #ff8533;
+      color: #fff;
+      padding: 20px;
       text-align: center;
     }
-    
-    .invitation-card .details p {
-      margin-bottom: 10px;
-    }
-    
-    .invitation-card .details .button {
-      display: inline-block;
-      background-color: #4caf50;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 3px;
-      transition: background-color 0.3s ease;
-    }
-    
-    .invitation-card .details .button:hover {
-      background-color: #45a049;
-    }
+
+    /* Personaliza aquí tus estilos adicionales */
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>Invitación a la venta de escabeche de pollo y berenjena</h1>
-    
-    <div class="invitation-card">
-      <img src="path/to/your/image.jpg" alt="Escabeche de pollo y berenjena">
-      
-      <div class="details">
-        <p><span style="color: #FFD700; font-size: 20px; font-weight: bold;">Escuela Nocturna CEM 74</span></p>
-        <p style="color: #FFD700; font-size: 18px;"><em>19 de noviembre - 19:30hs</em></p>
-        
-        <p>¡Te invitamos a nuestra venta especial de escabeche de pollo y berenjena!</p>
-        
-        <p>No te pierdas esta deliciosa oportunidad de probar nuestro grandioso escabeche</p>
+  </header>
+
+  <div class="container">
+    <div class="introduccion">
+      <h2>¡Te invitamos a nuestra venta especial de escabeche de pollo y berenjena!</h2>
+      <p>Fecha: 19 de noviembre</p>
+      <p>Lugar: Escuela Nocturna CEM 74</p>
+      <p>Hora: 19:30hs</p>
+    </div>
+
+    <h2>Recetas de escabeche</h2>
+
+    <div class="recetas">
+      <div class="receta">
+        <h3>Escabeche de pollo</h3>
+        <p>Ingredientes:</p>
+        <ul>
+          <li>Pollo</li>
+          <li>Cebolla</li>
+          <li>Zanahoria</li>
+          <li>Pimiento</li>
+          <li>Aceite de oliva</li>
+          <li>Vinagre</li>
+          <li>Especias</li>
+        </ul>
+      </div>
+
+      <div class="receta">
+        <h3>Escabeche de berenjena</h3>
+        <p>Ingredientes:</p>
+        <ul>
+          <li>Berenjena</li>
+          <li>Cebolla</li>
+          <li>Pimiento rojo</li>
+          <li>Aceite de oliva</li>
+          <li>Vinagre</li>
+          <li>Especias</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="imagenes">
+      <img src="ruta-imagen1.jpg" alt="Imagen del negocio 1">
+      <img src="ruta-imagen2.jpg" alt="Imagen del negocio 2">
+    </div>
+  </div>
+
+  <footer>
+    <p>Derechos de autor &copy; Tu Negocio</p>
+  </footer>
+</body>
+</html>
