@@ -1,152 +1,260 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación a la venta de escabeche de pollo y berenjena</title>
+  <title>Escabeche - Venta de escabeche de pollo y berenjena</title>
   <style>
-    /* Estilos generales */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffecd8;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-image: url('https://images3.alphacoders.com/130/1303834.jpg'); /* Reemplaza "ruta-imagen-fondo.jpg" con la ruta de tu imagen de fondo */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
-    /* Encabezado */
-    header {
-      background-color: #ff8533;
+    .header {
+      background-color: #000;
       padding: 20px;
       text-align: center;
     }
 
-    h1 {
-      font-size: 32px;
+    .navbar {
+      background-color: #334d3c;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .navbar a {
+      margin: 0 10px;
       color: #fff;
-      margin: 0;
-    }
-
-    /* Contenido principal */
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 5px 10px;
       border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    h2 {
-      font-size: 24px;
-      color: #ff8533;
-      margin: 0 0 20px;
+    .container {
+      padding: 20px;
     }
 
-    p {
-      margin: 0 0 10px;
+    .info-section {
+      padding: 20px;
+      margin-bottom: 20px;
     }
 
-    /* Recetas */
     .recetas {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
     }
 
     .receta {
-      width: calc(50% - 10px);
-      margin-bottom: 20px;
+      position: relative; /* Agregado */
+      width: 48%;
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 10px;
-      background-color: #f9f9f9;
-      border-radius: 5px;
-    }
-
-    /* Introducción */
-    .introduccion {
       margin-bottom: 20px;
-      background-color: #ffd8b5;
-      padding: 20px;
+      border: 1px solid #ccc;
       border-radius: 5px;
-    }
-
-    /* Imágenes */
-    .imagenes {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .imagenes img {
-      max-width: 200px;
-      border-radius: 5px;
-      margin-right: 10px;
-    }
-
-    /* Pie de página */
-    footer {
-      background-color: #ff8533;
-      color: #fff;
-      padding: 20px;
       text-align: center;
     }
 
-    /* Personaliza aquí tus estilos adicionales */
+    .receta img {
+      width: 300px;
+      height: 400px;
+      border-radius: 5px;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s; /* Agregado */
+    }
+
+    .receta:hover img {
+      transform: scale(1.05); /* Agregado */
+    }
+
+    .receta-info {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .receta-info ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .description {
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .description h3 {
+      margin-top: 0;
+    }
+
+    .description p {
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      background-color: #000;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .rights {
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .invitacion {
+      text-align: center;
+      font-size: 24px;
+      color: olive;
+      margin-top: 30px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .mas-informacion {
+      text-align: center;
+      font-size: 24px;
+      color: olive;
+      margin-top: 30px;
+    }
+
+    /* Estilos para la estela del mouse */
+    .mouse-trail {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: white;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.7;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Invitación a la venta de escabeche de pollo y berenjena</h1>
+  <header class="header">
+    <img src="C:\Users\alans_000\Desktop\Pag Web\LOGO.PNG" alt="Logo de la empresa">
   </header>
-
+  <nav class="navbar">
+    <a href="#recetas">Recetas</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
   <div class="container">
-    <div class="introduccion">
-      <h2>¡Te invitamos a nuestra venta especial de escabeche de pollo y berenjena!</h2>
-      <p>Fecha: 19 de noviembre</p>
-      <p>Lugar: Escuela Nocturna CEM 74</p>
-      <p>Hora: 19:30hs</p>
-    </div>
-
-    <h2>Recetas de escabeche</h2>
-
-    <div class="recetas">
-      <div class="receta">
-        <h3>Escabeche de pollo</h3>
-        <p>Ingredientes:</p>
-        <ul>
-          <li>Pollo</li>
-          <li>Cebolla</li>
-          <li>Zanahoria</li>
-          <li>Pimiento</li>
-          <li>Aceite de oliva</li>
-          <li>Vinagre</li>
-          <li>Especias</li>
-        </ul>
+    <section id="recetas" class="info-section">
+      <h2 class="invitacion">Invitación a la venta de escabeche de pollo y berenjena</h2>
+      <h3 class="subtitulo">Microemprendimiento de escabeche de pollo y berenjena</h3>
+      <div class="recetas">
+        <div class="receta">
+          <img src="https://www.maricruzavalos.com/wp-content/uploads/2020/08/aubergines_preserved_in_olive_oil-683x1024.jpg" alt="Imagen de escabeche de pollo">
+          <div class="receta-info">
+            <h3>Escabeche de pollo</h3>
+            <ul>
+    <li>500 gramos de pollo (muslos o pechugas)</li>
+    <li>2 berenjenas medianas</li>
+    <li>1 cebolla</li>
+    <li>3 dientes de ajo</li>
+    <li>1 zanahoria</li>
+    <li>1 pimiento rojo</li>
+    <li>1 pimiento verde</li>
+    <li>1/2 taza de vinagre de vino blanco</li>
+    <li>1/2 taza de aceite de oliva</li>
+    <li>1 cucharadita de comino molido</li>
+    <li>1 cucharadita de pimentón dulce</li>
+    <li>Sal y pimienta al gusto</li>
+  </ul>
+            <p>Preparación:"Nuestro escabeche de pollo combina tiernos trozos de pollo con una variedad de verduras frescas y sabrosas. El pollo se sazona cuidadosamente y se cocina con aceite de oliva y vinagre de vino blanco, creando una mezcla de sabores equilibrados y deliciosos. Cada bocado es una explosión de texturas y aromas que te harán desear más. ¡Descubre el placer de nuestro escabeche de pollo, preparado con ingredientes de calidad y pasión culinaria!"</p>
+          </div>
+        </div>
+        <div class="receta">
+          <img src="https://cocinerosargentinos.com/content/recipes/500x500/recipes.11262.jpeg" alt="Imagen de escabeche de berenjena">
+          <div class="receta-info">
+            <h3>Escabeche de berenjena</h3>
+            <ul>
+    <li>2 berenjenas medianas</li>
+    <li>1 cebolla</li>
+    <li>3 dientes de ajo</li>
+    <li>1 zanahoria</li>
+    <li>1 pimiento rojo</li>
+    <li>1 pimiento verde</li>
+    <li>1/2 taza de vinagre de vino blanco</li>
+    <li>1/2 taza de aceite de oliva</li>
+    <li>1 cucharadita de comino molido</li>
+    <li>1 cucharadita de pimentón dulce</li>
+    <li>Sal y pimienta al gusto</li>
+  </ul>
+            <p>Preparación: "Nuestro escabeche de berenjena es una opción vegetariana que no te puedes perder. Utilizamos berenjenas frescas, cortadas en rodajas o cubos, y las combinamos con una selección de verduras jugosas y crujientes. El vinagre de vino blanco y el aceite de oliva realzan los sabores naturales de las verduras, creando una experiencia culinaria única. Prueba nuestro escabeche de berenjena y déjate sorprender por su equilibrio perfecto de sabores y su textura irresistible. ¡Un bocado te transportará a un mundo de delicias vegetarianas!".</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="receta">
-        <h3>Escabeche de berenjena</h3>
-        <p>Ingredientes:</p>
-        <ul>
-          <li>Berenjena</li>
-          <li>Cebolla</li>
-          <li>Pimiento rojo</li>
-          <li>Aceite de oliva</li>
-          <li>Vinagre</li>
-          <li>Especias</li>
-        </ul>
+    <section id="nosotros" class="info-section">
+      <div class="description">
+        <h3>Sobre nosotros</h3>
+        <p>Somos una empresa dedicada a la venta de deliciosos escabeches de pollo y berenjena. Nuestros productos son preparados con ingredientes frescos y de alta calidad, brindando un sabor único y satisfactorio a nuestros clientes.</p>
       </div>
-    </div>
+      <div class="description">
+        <h3>Nuestra misión</h3>
+        <p>Nuestra misión es ofrecer escabeches caseros de excelente calidad, utilizando ingredientes naturales y siguiendo recetas tradicionales. Queremos satisfacer los paladares más exigentes y brindar una experiencia culinaria única.</p>
+      </div>
+      <div class="description">
+        <h3>Nuestro equipo</h3>
+        <p>Contamos con un equipo de expertos en la preparación de escabeches, apasionados por la cocina y comprometidos con ofrecer productos de primera calidad. Trabajamos con dedicación y amor por lo que hacemos.</p>
+      </div>
+    </section>
 
-    <div class="imagenes">
-      <img src="ruta-imagen1.jpg" alt="Imagen del negocio 1">
-      <img src="ruta-imagen2.jpg" alt="Imagen del negocio 2">
-    </div>
+    <section id="contacto" class="info-section">
+      <div class="description">
+        <h3>Contáctanos</h3>
+        <p>Si deseas realizar un pedido o tienes alguna consulta, no dudes en ponerte en contacto con nosotros. Estaremos encantados de atenderte.</p>
+        <p>Teléfono: 123-456-789</p>
+        <p>Email: info@escabeche.com</p>
+      </div>
+    </section>
   </div>
 
-  <footer>
-    <p>Derechos de autor &copy;Escabeche Rick's</p>
+  <div class="mouse-trail"></div> <!-- Elemento para la estela del mouse -->
+
+  <footer class="footer">
+    <p>Todos los derechos reservados &copy; 2023 Escabeche</p>
   </footer>
+  <div class="rights">
+    <p>Pagina creada con bienes educativos from: los pibes</p>
+  </div>
+
+  <script>
+    // Animación de la estela del mouse
+    document.addEventListener("mousemove", function (event) {
+      var mouseTrail = document.querySelector(".mouse-trail");
+      var x = event.clientX;
+      var y = event.clientY;
+      mouseTrail.style.left = x + "px";
+      mouseTrail.style.top = y + "px";
+    });
+  </script>
 </body>
+
 </html>
