@@ -5,11 +5,36 @@
   <meta charset="UTF-8">
   <title>Escabeche - Venta de escabeche de pollo y berenjena</title>
   <style>
+    /* Estilo para el cursor personalizado */
+    .custom-cursor {
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #FFD700; /* Color del cursor */
+      border-radius: 50%;
+      mix-blend-mode: difference;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease, background-color 0.3s ease; /* Agregamos una transición suave */
+      transition-property: transform, background-color;
+      will-change: transform, background-color;
+      z-index: 9999;
+      background-color: transparent; /* Color de fondo transparente por defecto */
+    }
+
+    /* Estilo para el cursor al hacer hover en enlaces de navegación */
+    .navbar a:hover + .custom-cursor {
+      background-color: #FFD700; /* Cambia el color de fondo al hacer hover en los enlaces */
+      width: 30px; /* Cambia el tamaño al hacer hover */
+      height: 30px;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-image: url('https://images3.alphacoders.com/130/1303834.jpg'); /* Reemplaza "ruta-imagen-fondo.jpg" con la ruta de tu imagen de fondo */
+      background-color: #000; /* Cambia el color de fondo a negro */
+      background-image: url('https://images3.alphacoders.com/130/1303834.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -51,8 +76,8 @@
     }
 
     .receta {
-      position: relative; /* Agregado */
-      width: 48%;
+      position: relative;
+      width: 30%; /* Cambio en el ancho de los cuadrados de receta */
       background-color: rgba(255, 255, 255, 0.7);
       padding: 10px;
       margin-bottom: 20px;
@@ -62,16 +87,16 @@
     }
 
     .receta img {
-      width: 300px;
-      height: 400px;
+      width: 250px; /* Achicar el tamaño de las imágenes */
+      height: 330px; /* Achicar el tamaño de las imágenes */
       border-radius: 5px;
       display: block;
       margin: 0 auto;
-      transition: transform 0.3s; /* Agregado */
+      transition: transform 0.3s;
     }
 
     .receta:hover img {
-      transform: scale(1.05); /* Agregado */
+      transform: scale(1.05);
     }
 
     .receta-info {
@@ -135,27 +160,25 @@
       margin-top: 30px;
     }
 
-    /* Estilos para la estela del mouse */
-    .mouse-trail {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: white;
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.7;
-      transform: translate(-50%, -50%);
-      mix-blend-mode: difference;
+    /* Cambios en el logo */
+    .logo {
+      background-color: black; /* Cambio de fondo a negro */
+      padding: 10px; /* Espaciado interno */
+      max-width: 300px; /* Tamaño máximo */
+      margin: 0 auto; /* Centrar el logo */
+    }
+
+    .logo img {
+      max-width: 100%; /* Agrandar la imagen del logo */
     }
   </style>
 </head>
 
 <body>
   <header class="header">
-    <img src="https://i.imgur.com/sBcMCLl.png" alt="Logo de la empresa">
+    <div class="logo">
+      <img src="https://i.imgur.com/lq6nhJm.jpg" alt="Logo de la empresa" style="max-width: 100%;">
+    </div>
   </header>
   <nav class="navbar">
     <a href="#recetas">Recetas</a>
@@ -165,27 +188,43 @@
   <div class="container">
     <section id="recetas" class="info-section">
       <h2 class="invitacion">Invitación a la venta de escabeche de pollo y berenjena</h2>
-      <h3 class="subtitulo">Microemprendimiento de escabeche de pollo y berenjena</h3>
+      <h3 class="subtitulo">Microemprendimiento</h3>
+      <div class="intro-text" style="text-align: center;">
+        <p style="color: #fff;">Somos un grupo de cuatro amigos que están acá para compartir algo especial con ustedes: nuestras deliciosas creaciones de escabeche.</p>
+        <p class="italic" style="color: #fff;">No somos chefs profesionales ni expertos culinarios, somos simplemente amantes de la buena comida y nos encanta lo que hacemos.</p>
+        <p style="color: #fff;">¿Qué hacemos exactamente? Bueno, preparamos escabeches de pollo, berenjena y cebolla. ¿Por qué? Porque creemos que en la simplicidad de estos platos se encuentra la verdadera esencia de la comida reconfortante y sabrosa.</p>
+        <p style="color: #fff;">Nuestra historia comenzó como parte de un proyecto escolar, y desde entonces, nos hemos sumergido en el mundo de los sabores, las recetas tradicionales y la calidad de los ingredientes. No somos una gran empresa, pero ponemos todo nuestro esfuerzo en cada frasco que preparamos.</p>
+
+
+        <p style="color: #fff;">Lo que nos importa es brindarte algo auténtico y delicioso. Queremos compartir nuestra pasión por el buen comer y explorar nuevos sabores.</p>
+        <p style="color: #fff;">Así que, si estás listo para probar algo realmente bueno, ¡seguí explorando nuestras recetas y conócenos un poco más!</p>
+
+
+        <p style="color: #fff;">Si tenes alguna pregunta o deseas realizar un pedido, no dudes en contactarnos. Estamos acá para compartir nuestra comida casera y deliciosa con vos.</p>
+        <p class="italic" style="color: #fff;">¡A comer y disfrutar!</p>
+        <p class="italic" style="color: #ff4;">(imagenes ilustrativas)</p>
+      </div>
+
       <div class="recetas">
         <div class="receta">
           <img src="https://www.maricruzavalos.com/wp-content/uploads/2020/08/aubergines_preserved_in_olive_oil-683x1024.jpg" alt="Imagen de escabeche de pollo">
           <div class="receta-info">
             <h3>Escabeche de pollo</h3>
             <ul>
-    <li>500 gramos de pollo (muslos o pechugas)</li>
-    <li>2 berenjenas medianas</li>
-    <li>1 cebolla</li>
-    <li>3 dientes de ajo</li>
-    <li>1 zanahoria</li>
-    <li>1 pimiento rojo</li>
-    <li>1 pimiento verde</li>
-    <li>1/2 taza de vinagre de vino blanco</li>
-    <li>1/2 taza de aceite de oliva</li>
-    <li>1 cucharadita de comino molido</li>
-    <li>1 cucharadita de pimentón dulce</li>
-    <li>Sal y pimienta al gusto</li>
-  </ul>
-            <p>Preparación:"Nuestro escabeche de pollo combina tiernos trozos de pollo con una variedad de verduras frescas y sabrosas. El pollo se sazona cuidadosamente y se cocina con aceite de oliva y vinagre de vino blanco, creando una mezcla de sabores equilibrados y deliciosos. Cada bocado es una explosión de texturas y aromas que te harán desear más. ¡Descubre el placer de nuestro escabeche de pollo, preparado con ingredientes de calidad y pasión culinaria!"</p>
+              <li>500 gramos de pollo (muslos o pechugas)</li>
+              <li>2 berenjenas medianas</li>
+              <li>1 cebolla</li>
+              <li>3 dientes de ajo</li>
+              <li>1 zanahoria</li>
+              <li>1 pimiento rojo</li>
+              <li>1 pimiento verde</li>
+              <li>1/2 taza de vinagre de vino blanco</li>
+              <li>1/2 taza de aceite de oliva</li>
+              <li>1 cucharadita de comino molido</li>
+              <li>1 cucharadita de pimentón dulce</li>
+              <li>Sal y pimienta al gusto</li>
+            </ul>
+            <p>Preparación: "Nuestro escabeche de pollo combina tiernos trozos de pollo con una variedad de verduras frescas y sabrosas. El pollo se sazona cuidadosamente y se cocina con aceite de oliva y vinagre de vino blanco, creando una mezcla de sabores equilibrados y deliciosos. Cada bocado es una explosión de texturas y aromas que te harán desear más. ¡Descubre el placer de nuestro escabeche de pollo, preparado con ingredientes de calidad y pasión culinaria!"</p>
           </div>
         </div>
         <div class="receta">
@@ -193,66 +232,83 @@
           <div class="receta-info">
             <h3>Escabeche de berenjena</h3>
             <ul>
-    <li>2 berenjenas medianas</li>
-    <li>1 cebolla</li>
-    <li>3 dientes de ajo</li>
-    <li>1 zanahoria</li>
-    <li>1 pimiento rojo</li>
-    <li>1 pimiento verde</li>
-    <li>1/2 taza de vinagre de vino blanco</li>
-    <li>1/2 taza de aceite de oliva</li>
-    <li>1 cucharadita de comino molido</li>
-    <li>1 cucharadita de pimentón dulce</li>
-    <li>Sal y pimienta al gusto</li>
-  </ul>
+              <li>2 berenjenas medianas</li>
+              <li>1 cebolla</li>
+              <li>3 dientes de ajo</li>
+              <li>1 zanahoria</li>
+              <li>1 pimiento rojo</li>
+              <li>1 pimiento verde</li>
+              <li>1/2 taza de vinagre de vino blanco</li>
+              <li>1/2 taza de aceite de oliva</li>
+              <li>1 cucharadita de comino molido</li>
+              <li>1 cucharadita de pimentón dulce</li>
+              <li>Sal y pimienta al gusto</li>
+            </ul>
             <p>Preparación: "Nuestro escabeche de berenjena es una opción vegetariana que no te puedes perder. Utilizamos berenjenas frescas, cortadas en rodajas o cubos, y las combinamos con una selección de verduras jugosas y crujientes. El vinagre de vino blanco y el aceite de oliva realzan los sabores naturales de las verduras, creando una experiencia culinaria única. Prueba nuestro escabeche de berenjena y déjate sorprender por su equilibrio perfecto de sabores y su textura irresistible. ¡Un bocado te transportará a un mundo de delicias vegetarianas!".</p>
           </div>
         </div>
+        <!-- Tercer Cuadrado de Receta -->
+        <div class="receta">
+          <img src="https://media.istockphoto.com/id/535297743/photo/pickled-onions-in-glass-jar.jpg?s=612x612&w=0&k=20&c=2cgH0x-jrw4ONd_bp_shjVG5FPFByds_R8KElr5GsCg=" alt="Imagen de tercer escabeche">
+          <div class="receta-info">
+            <h3>Escabeche de cebollita</h3>
+            <ul>
+              <li>Ingredientes según tu receta</li>
+              <!-- Puedes agregar elementos a la lista según tus necesidades -->
+            </ul>
+            <p>Preparación: "Agrega aquí la descripción de tu tercer escabeche".</p>
+          </div>
+        </div>
+        <!-- Fin Tercer Cuadrado de Receta -->
       </div>
     </section>
 
     <section id="nosotros" class="info-section">
       <div class="description">
         <h3>Sobre nosotros</h3>
-        <p>Somos una empresa dedicada a la venta de deliciosos escabeches de pollo y berenjena. Nuestros productos son preparados con ingredientes frescos y de alta calidad, brindando un sabor único y satisfactorio a nuestros clientes.</p>
+        <p>Somos un equipo de cuatro microemprendedores enfocados en ofrecer escabeches de alta calidad. Nuestra empresa nace como parte de un proyecto escolar donde hemos desarrollado recetas tradicionales de escabeche de pollo, berenjena y cebolla con un enfoque en la excelencia y la calidad de los ingredientes.</p>
+        <p>Trabajamos arduamente para garantizar que cada uno de nuestros productos refleje nuestra dedicación y compromiso con la satisfacción del cliente. Nuestra proposito es proporcionar opciones culinarias deliciosas y únicas que deleiten a nuestros clientes y les brinden una experiencia gastronómica excepcional.</p>
       </div>
       <div class="description">
         <h3>Nuestra misión</h3>
-        <p>Nuestra misión es ofrecer escabeches caseros de excelente calidad, utilizando ingredientes naturales y siguiendo recetas tradicionales. Queremos satisfacer los paladares más exigentes y brindar una experiencia culinaria única.</p>
+        <p>Nuestra misión se centra en ofrecer productos de escabeche de la más alta calidad, desarrollados siguiendo recetas tradicionales y utilizando ingredientes de primera calidad. Buscamos brindar opciones deliciosas y únicas que reflejen nuestro compromiso con la gente.</p>
+        <p>Exploramos nuevas combinaciones y sabores mientras mantenemos la autenticidad de las recetas tradicionales. Queremos sorprender y encantar a quienes prueban nuestros escabeches, proporcionando una experiencia excepcional.</p>
       </div>
       <div class="description">
         <h3>Nuestro equipo</h3>
-        <p>Contamos con un equipo de expertos en la preparación de escabeches, apasionados por la cocina y comprometidos con ofrecer productos de primera calidad. Trabajamos con dedicación y amor por lo que hacemos.</p>
+        <p>Somos un grupo de cuatro emprendedores dedicados a la creación de escabeches. Cada uno de nosotros aporta su experiencia y pasión a la preparación de nuestros productos de alta calidad.</p>
+        <p>Trabajamos en conjunto con un objetivo claro: ofrecer escabeches deliciosos y auténticos que reflejen nuestra dedicación. Estamos encantados de compartir nuestros productos con ustedes.</p>
       </div>
     </section>
 
     <section id="contacto" class="info-section">
       <div class="description">
         <h3>Contáctanos</h3>
-        <p>Si deseas realizar un pedido o tienes alguna consulta, no dudes en ponerte en contacto con nosotros. Estaremos encantados de atenderte.</p>
-        <p>Teléfono: 123-456-789</p>
-        <p>Email: info@escabeche.com</p>
+        <p>Si deseas realizar un pedido o tenes alguna consulta, no dudes en ponerte en contacto con nosotros. Estaremos encantados de atenderte.</p>
+        <p>Teléfono: +54 9 2920358450</p>
+        <p>Instagram: escabeche_rick</p>
       </div>
     </section>
   </div>
 
-  <div class="mouse-trail"></div> <!-- Elemento para la estela del mouse -->
+  <!-- Elemento para el cursor personalizado -->
+  <div class="custom-cursor"></div>
 
   <footer class="footer">
-    <p>Todos los derechos reservados &copy; 2023 Escabeche</p>
+    <p>Todos los derechos reservados &copy; Escabeche 2023</p>
   </footer>
   <div class="rights">
-    <p>Pagina creada con bienes educativos from: los pibes</p>
+    <p>Pagina creada con bienes educativos.</p>
   </div>
 
   <script>
     // Animación de la estela del mouse
     document.addEventListener("mousemove", function (event) {
-      var mouseTrail = document.querySelector(".mouse-trail");
+      var customCursor = document.querySelector(".custom-cursor");
       var x = event.clientX;
       var y = event.clientY;
-      mouseTrail.style.left = x + "px";
-      mouseTrail.style.top = y + "px";
+      customCursor.style.left = x + "px";
+      customCursor.style.top = y + "px";
     });
   </script>
 </body>
